@@ -27,23 +27,23 @@ acorde = prompt("Ingrese un acorde mayor en minúsculas")
 function saberNotasDe(acorde) {
     switch (acorde) {
         case "do":
-            return "DO, MI, SOL";
+            return "Las notas que componen al acorde son: DO, MI, SOL";
             break;
         case "re":
-            return "RE, FA, LA";
+            return "Las notas que componen al acorde son: RE, FA, LA";
             break;
         case "mi":
-            return "MI, SOL, SI";
+            return "Las notas que componen al acorde son: MI, SOL, SI";
             break;
         case "fa":
-            return "FA, LA, DO";
+            return "Las notas que componen al acorde son: FA, LA, DO";
             break;
         case "sol":
-            return "SOL, SI, RE";
+            return "Las notas que componen al acorde son: SOL, SI, RE";
         case "la":
-            return "LA, DO, MI";
+            return "Las notas que componen al acorde son: LA, DO, MI";
         case "si":
-            return "SI, RE, FA";
+            return "Las notas que componen al acorde son: SI, RE, FA";
         default:
             return "Dato inválido. Ingrese un acorde mayor (do, re, mi, fa, sol, la, si)";
             break;
@@ -51,7 +51,7 @@ function saberNotasDe(acorde) {
     
 }
 alert(saberNotasDe(acorde));
-acorde = prompt("Si lo desea, escriba otro acorde")
+acorde = prompt("Si lo desea, escriba otro acorde");
 alert(saberNotasDe(acorde));
 
 console.log(saberNotasDe(acorde));
