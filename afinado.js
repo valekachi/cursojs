@@ -75,9 +75,7 @@ const escalasMayores = [
   {nombreEscalaMayor: "La", escala: "LA, SI, DO#, RE, MI, FA#, SOL#, LA"},
   {nombreEscalaMayor: "Si", escala: "SI, DO#, RE#, MI, FA#, SOL#, LA#, SI"}
 ]
-for (const escala of escalasMayores) {
-alert(escala);
-}
+
 
 
 console.log(escalasMayores);
