@@ -1,155 +1,52 @@
-// // // Función que nos dice si una nota está afinada. Decimos esto cuando la frecuencia de una nota es de 440Hz.
-//  function estaAfinado() {
-//  let ingresarFrecuencia = Number(prompt("Ingrese la frecuencia de la nota"));
-//  let frecuenciaLaCentral = 440;
-//  if (ingresarFrecuencia == frecuenciaLaCentral) {
-//     alert("Está afinado");
-// } else if  (ingresarFrecuencia >= 437 && ingresarFrecuencia <= 443) {
-//     alert("Está cerca de estar afinado, pero la frecuencia aún no llega a 440.");
-// } else {
-//     alert("La frecuencia está fuera del rango de aproximación a la afinación. Cambie la frecuencia y vuelva a intentarlo.")
-// }
-// }
-        
-// estaAfinado();
-//  ////////////////////////////////////////////////////////////
-// let colorIngresado  = prompt("Traduce al inglés la palabra 'rojo'");
-// function traduceRojo() {
-// while(colorIngresado != "red"){
-//     alert("Tu traducción fue '"+ colorIngresado+ "'. Incorrecto");
-//     colorIngresado = prompt("Ingresar nuevamente");
-// }
-// alert("Correcto! Felicitaciones.");
-// }
-// traduceRojo();
-// ////FUNCIÓN PARA SABER CON QUÉ NOTAS ESTAN COMPUESTOS LOS ACORDES MAYORES //
- //let acorde = prompt("Ingrese un acorde mayor en minúsculas")
-//  function saberNotasDe(acorde) {
-//      switch (acorde) {
-//          case "do":
-//              return "Las notas que componen al acorde son: DO, MI, SOL";
-//              break;
-//          case "re":
-//              return "Las notas que componen al acorde son: RE, FA, LA";
-//              break;
-//          case "mi":
-//              return "Las notas que componen al acorde son: MI, SOL, SI";
-//              break;
-//          case "fa":
-//              return "Las notas que componen al acorde son: FA, LA, DO";
-//              break;
-//          case "sol":
-//              return "Las notas que componen al acorde son: SOL, SI, RE";
-//          case "la":
-//              return "Las notas que componen al acorde son: LA, DO, MI";
-//          case "si":
-//              return "Las notas que componen al acorde son: SI, RE, FA";
-//          default:
-//              return "Dato inválido. Ingrese un acorde mayor (do, re, mi, fa, sol, la, si)";
-//              break;
-//      }
-//  }
-// }
-// alert(saberNotasDe(acorde));
-// acorde = prompt("Si lo desea, escriba otro acorde");
-// alert(saberNotasDe(acorde));
 
-// console.log(saberNotasDe(acorde));
+let bienvenida = alert("En este juego deberás ordenar las letras para formar palabras. ¡Adelante!")
 
-
-
-const notasMusicales = ["DO","RE","MI","FA","SOL","LA","SI"];
-console.log( notasMusicales.join(" / "));
-const cifradoAmericano = ["C", "D", "E", "F", "G", "A", "B"];
-console.log(cifradoAmericano.join(" / "));
-
-
-
-
-const escalasMayores = [
-  {nombreEscalaMayor: "Do", escala: "DO, RE, MI, FA, SOL, LA, SI, DO"},
-  {nombreEscalaMayor: "Re", escala: "RE, MI, FA#, SOL, LA, SI, DO#, RE"},
-  {nombreEscalaMayor: "Mi", escala: "MI, FA#, SOL#, LA, SI, DO#, RE#, MI"},
-  {nombreEscalaMayor: "Fa", escala: "FA, SOL, LA, SIb, DO, RE, MI, FA"},
-  {nombreEscalaMayor: "Sol", escala: "SOL, LA, SI, DO, RE, MI, FA#, SOL"},
-  {nombreEscalaMayor: "La", escala: "LA, SI, DO#, RE, MI, FA#, SOL#, LA"},
-  {nombreEscalaMayor: "Si", escala: "SI, DO#, RE#, MI, FA#, SOL#, LA#, SI"}
+let letrasMinus = [
+  "a","b","c","d","e","f","g","h","i",
+  "j","k","l","m","n","ñ","o","p","q",
+  "r","s","t","u","v","w","x","y","z"
+];
+let letrasMay = [
+  "A","B","C","D","E","F","G","H","I",
+  "J","K","L","M","N","Ñ","O","P","Q",
+  "R","S","T","U","V","W","X","Y","Z"
+];
+let vocalesTildes = [
+  "á","é","í","ó","ú"
 ]
+let oso = letrasMay[15] + letrasMinus[19] + letrasMinus[15];
+let osoDesordenado = prompt("ordena las siguientes letras: " + letrasMay[15] + letrasMinus[15] + letrasMinus[19] + " Pista: animal" );
+while (osoDesordenado != oso) {
+osoDesordenado = prompt("Sigue intentando!")
+}
+alert("Correcto! La palabra es Oso.")
+
+let elefante = letrasMay[4] + letrasMinus[11] + letrasMinus[4] + letrasMinus[5] + letrasMinus[0] + letrasMinus[13] + letrasMinus[20] + letrasMinus[4];
+let elefanteDesordenado = prompt("Ordena las siguientes letras: " + letrasMinus[11] + letrasMay[4] + letrasMinus[5] + letrasMinus[13] + letrasMinus[0] + letrasMinus[20] + letrasMinus[4] + letrasMinus[4] + ". Pista: animal. ");
+while (elefanteDesordenado != elefante) {
+  elefanteDesordenado = prompt("Sigue intentando!");
+}
+alert("Correcto! La palabra es Elefante.")
+letrasMinus.length;
+console.log(letrasMinus);
+
+let gato = letrasMay[6] + letrasMinus[0] + letrasMinus[20] + letrasMinus[15];
+console.log(gato);
+
+let nandu = letrasMay[14] + letrasMinus[0] + letrasMinus[13] + letrasMinus[3] + vocalesTildes[4];
+let nanduDesordenado = prompt("Ordena las siguientes letras: " + letrasMinus[0] + letrasMay[14] + vocalesTildes[4] + letrasMinus[13] + letrasMinus[3] + ". Pista: animal");
+while (nanduDesordenado != nandu) {
+  nanduDesordenado = prompt("Sigue intentando!");
+}
+alert("Correcto! Felicitaciones. Esta si que era difícil!")
 
 
 
-console.log(escalasMayores);
-
-const escalasMenores = [
-  {nombreEscalaMenor: "DOm", escala: "DO, RE, MIb, FA, SOL, LAb, SIb, DO"},
-  {nombreEscalaMenor: "REm", escala: "RE, MI, FA, SOL, LA, SIb, DO, RE"},
-  {nombreEscalaMenor: "MIm", escala: "MI, FA#, SOL, LA, SI, DO, RE, MI"},
-  {nombreEscalaMenor: "FAm", escala: "FA, SOL, LAb, SIb, DO, REb, MIb, FA"},
-  {nombreEscalaMenor: "SOLm", escala: "SOL, LA, SIb, DO, RE, MIb, FA, SOL"},
-  {nombreEscalaMenor: "LAm", escala: "LA, SI, DO, RE, MI, FA, SOL, LA"},
-  {nombreEscalaMenor: "SIm", escala: "SI, DO#, RE, MI, FA#, SOL, LA, SI"}
-]
-console.log(escalasMenores);
 
 
-  let escalasMayoresyMenores = escalasMayores.concat(escalasMenores);
-console.log(escalasMayoresyMenores);
-
-const escalaMenorMayorDo = [
-  escalasMayores[0],
-  escalasMenores[0]
-]
-console.log(escalaMenorMayorDo);
-
-const escalaMenorMayorRe = [
-  escalasMayores[1],
-  escalasMenores[1]
-]
-console.log(escalaMenorMayorRe);
-
-const escalaMenorMayorMi = [
-  escalasMayores[2],
-  escalasMenores[2]
-]
-console.log(escalaMenorMayorMi);
-
-const escalaMenorMayorFa = [
-  escalasMayores[3],
-  escalasMenores[3]
-]
-console.log(escalaMenorMayorFa);
-
-const escalaMenorMayorSol = [
-  escalasMayores[4],
-  escalasMenores[4]
-]
-console.log(escalaMenorMayorSol);
-
-const escalaMenorMayorLa = [
-  escalasMayores[5],
-  escalasMenores[5]
-]
-console.log(escalaMenorMayorLa);
-
-const escalaMenorMayorSi = [
-  escalasMayores[6],
-  escalasMenores[6]
-]
-console.log(escalaMenorMayorSi);
 
 
-////IGNORAR EL SIGUIENTE CÓDIGO, ESTOY TRABAJANDO EN ÉL!///
 
-//construir un programa que tome como parametro una escala mayor y devuelva su escala o tonalidad relativa menor
-// DO mayor debería devolver LAm.
-//  let acordeMayor = prompt("Ingresa una nota mayor para saber su escala relativa menor")
-//  function relativaMenor(acordeMayor) {
-//  for (const escala of escalasMenores) {
-//    alert(escalasMenores[5]);
-//  }
-//  }
-
-//  relativaMenor();
 
 
 
@@ -191,3 +88,4 @@ console.log(escalaMenorMayorSi);
 //   console.log(elementosFinales);
 //   elementosFinales.reverse();
 //   console.log(elementosFinales);
+

@@ -1,0 +1,38 @@
+.fondo {
+    background: linear-gradient(rgb(37, 37, 37), rgb(105, 48, 195), rgb(100, 223, 223), rgb(128, 255, 219), rgb(37, 37, 37));
+    margin: 4px;
+}
+.bienvenida {
+    font-family: 'Grandstander', cursive;
+    font-weight: bolder;
+    color: black;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border: yellowgreen 10px solid;
+    text-align: center;
+}
+.bienvenida--mod {
+    font-family: 'Grandstander', cursive;
+    font-weight: bolder;
+    color: black;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    text-align: center;
+    word-spacing: 5px;
+}
+
+.empezamos {
+    color:black;
+    background-color: rgb(105, 48, 195);
+    font-family: 'Grandstander', cursive;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    font-weight: 800;
+    border: black 10px solid;
+    word-spacing: 5px;
+}
+.empezamos:hover {
+    background-color: rgb(222, 9, 119);
+
+
+}
