@@ -30,9 +30,12 @@
     font-weight: 800;
     border: black 10px solid;
     word-spacing: 5px;
+    text-decoration: none;
 }
+
 .empezamos:hover {
-    background-color: rgb(222, 9, 119);
+    background-color: yellowgreen;
+    color:rgb(105, 48, 195)
 
 
 }
