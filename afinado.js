@@ -1,6 +1,4 @@
 let ingresarNombre = prompt("Ingresa tu nombre!");
-let holaUsuario = alert("Bienvenido/a a Ordenados, " + ingresarNombre + "! ");
-let bienvenida = alert("En este juego deberás ordenar las letras para formar palabras. ¡Adelante!")
 
 const letrasMinus = [
   "a","b","c","d","e","f","g","h","i",
@@ -34,13 +32,10 @@ const murcielago = new Palabras("animal", "Murciélago", "Soy un animal que le g
 
 let ornitorrincoOrdenado = ornitorrinco.solucion;
 let ornitorrincoDesordenado = prompt("Ordena la siguiente palabra: ocnirrotinrO.")
-if (ornitorrincoDesordenado == ornitorrincoOrdenado) {
-  alert("Bien hecho!!")
-} else {
-  alert("Sigue intentando!");
-    
-  }
-
+while (ornitorrincoDesordenado != ornitorrincoOrdenado) {
+  ornitorrincoDesordenado = prompt("Sigue intentando!");
+}
+alert("Correcto!!");
 const paises = [
   {pais: "Uruguay", continente: "Latinoamérica"},
   {pais: "Singapur", continente: "Asia"},
