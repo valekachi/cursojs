@@ -88,48 +88,45 @@ alert("Correcto! Felicitaciones. Esta si que era difícil!")
 const perro = letrasMay[16] + letrasMinus[4] + letrasMinus[18] + letrasMinus[18] + letrasMinus[15];
 
 
-// EJERCICIO EN CLASE
-// const elementosIniciales = [
-//     {nombre: "Daniel", edad: 32},
-//     {nombre: "Martina", edad: 7},
-//     {nombre: "Karen", edad: 23},
-//     {nombre: "Amelia", edad: 2}
-//   ]
-//   elementosIniciales.shift();
-//   console.log(elementosIniciales);
+//EJERCICIO EN CLASE
+/*const elementosIniciales = [
+    {nombre: "Daniel", edad: 32},
+    {nombre: "Martina", edad: 7},
+    {nombre: "Karen", edad: 23},
+    {nombre: "Amelia", edad: 2}
+  ]
+  elementosIniciales.shift();
+  console.log(elementosIniciales);
 
 
-//   const elementoAgregar = [
-//     {nombre: "Felipe", edad: 36},
-//     {nombre: "Julieta", edad: 7},
-//     {nombre: "Edgar", edad: 66}
-//   ]
-//   elementoAgregar.pop();
-//   console.log(elementoAgregar);
-  //
-//   let elementosFinales = elementosIniciales.concat(elementoAgregar);
-//   console.log(elementosFinales);
-//   elementosFinales.reverse();
-//   console.log(elementosFinales);
+const elementoAgregar = [
+      {nombre: "Felipe", edad: 36},
+      {nombre: "Julieta", edad: 7},
+      {nombre: "Edgar", edad: 66}
+    ]
+    elementoAgregar.pop();
+    console.log(elementoAgregar);
+
+  let elementosFinales = elementosIniciales.concat(elementoAgregar);
+    console.log(elementosFinales);
+    elementosFinales.reverse();
+
+  console.log(elementosFinales);*/
 
 
 console.dir(document)
 let titulo = document.getElementById('titulo');
-titulo.innerText = titulo.innerHTML + " " + ingresarNombre;
+titulo.innerText = titulo.innerHTML + ", " + ingresarNombre;
 console.log(titulo.innerText)
 
+let formularioAnimal = document.getElementById("formAnimal");
+formularioAnimal.innerHTML = "<input type='text' maxlength='1'></input>";
+formularioAnimal.className = "empezamos" //Ver cómo hago para que el input quede más pequeño
 
-//CLASE DOM 
-/*const divs = document.getElementsByClassName('bienvenida') //usar Foreach
-for (div of divs) {
-  console.log(divs);
-}
 
-const etiquetaDiv = document.getElementsByTagName('div')
-console.log(etiquetaDiv[0].innerHTML);
 
-let bienvenida = document.querySelectorAll(".bienvenida");
-console.log(bienvenida);*/
+
+
 
 
 

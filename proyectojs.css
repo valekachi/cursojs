@@ -37,3 +37,15 @@
     background-color: yellowgreen;
     color:rgb(105, 48, 195)
 }
+
+.entradaLetra {
+    color:black;
+    background-color: rgb(105, 48, 195);
+    font-family: 'Grandstander', cursive;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    font-weight: 800;
+    border: black 10px solid;
+    word-spacing: 5px;
+    text-decoration: none;
+}
