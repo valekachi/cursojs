@@ -39,16 +39,6 @@ paises.pop();
 paises.reverse();
 paises.slice(0,2);
 
-let nivelSuperado = true
-let puntos = 0
-function puntaje() {
-  if (nivelSuperado) {
-    puntos += 1;
-    //alert("Felicitaciones! Ganaste un punto");
-  } 
-}
-puntaje();
-
 const form = document.querySelector('form');
 let bienvenido = document.querySelector('#titulo');
 const mandar = document.querySelector('#sub');
@@ -62,8 +52,18 @@ form.addEventListener("submit", (e) => {
   nombreIngresado = entradaNombre.value;
   bienvenido.innerHTML = "Hola " + nombreIngresado + ", bienvenido/a!";
   entradaNombre.remove();
-  mandar.remove();
+  mandar.remove(); 
 })
+
+entradaNombre.addEventListener('input', (e) => {
+  sessionStorage.setItem('inputName', entradaNombre.value);
+})
+
+const miString = JSON.stringify(ornitorrinco);
+const guardarOrni = localStorage.setItem('ornitorrinco', miString);
+
+
+
 const ordenelo = document.querySelector('#ordene');
 const formAnimal = document.querySelector('#formAnimales');
 const ornito = document.querySelector('#orni');
@@ -83,20 +83,6 @@ let incorrecto = document.createElement("p")
     incorrecto.innerHTML = "Incorrecto. Sigue intentando!";
     document.body.append(incorrecto);
   }
+
+
 });
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
