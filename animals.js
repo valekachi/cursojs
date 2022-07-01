@@ -12,21 +12,26 @@ class Palabras {
 
 
   const paises = [
-    {pais: "Uruguay", continente: "Latinoamérica"},
-    {pais: "Singapur", continente: "Asia"},
-    {pais: "Nueva Zelanda", continente: "Oceanía"},
-    {pais: "Bolivia", continente: "Latinoamerica"},
-    {pais: "Canadá", continente: "Norteamérica"},
-    {pais: "Cuba", continente: "Centroamérica"}
+    {pais: 'gyuUaru'},
+    {pais: 'iSagnrup'},
+    {pais: "uevNa aleZdna"},
+    {pais: "livioBa"},
+    {pais: "dánCaa"},
+    {pais: "baCu"}
   ];
-  
-for (const nacion of paises) {
-    let paisillos = document.createElement("h1");
-    cadaPais = JSON.stringify(nacion.pais);
-    document.body.append(cadaPais);
+
+    for (const pais of paises) {
+    let paisito = document.createElement('h1');
+    let inputPais = document.createElement('input');
+    let subPais = document.createElement('button');
+    paisito.innerText = "ORDENA LAS SIGUIENTES LETRAS: " + JSON.stringify(Object.values(pais));
+    document.body.append(paisito);
+    document.body.append(inputPais);
+    document.body.append(subPais);
+    console.log(pais);
   };
 
-  const miString = JSON.stringify(avestruz);
+const miString = JSON.stringify(avestruz);
 const guardarAvestruz = localStorage.setItem('avestruz', miString);
 
 
@@ -51,4 +56,3 @@ let incorrecto = document.createElement("p");
     document.body.append(incorrecto);
   }
 });
-
