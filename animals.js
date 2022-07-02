@@ -24,7 +24,7 @@ class Palabras {
     let paisito = document.createElement('h1');
     let inputPais = document.createElement('input');
     let subPais = document.createElement('button');
-    paisito.innerText = "ORDENA LAS SIGUIENTES LETRAS: " + JSON.stringify(Object.values(pais));
+    paisito.innerText= "ORDENA LAS SIGUIENTES LETRAS: " + (pais.pais);
     document.body.append(paisito);
     document.body.append(inputPais);
     document.body.append(subPais);
