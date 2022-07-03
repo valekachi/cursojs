@@ -10,6 +10,9 @@
     border-top-left-radius: 10px;
     border: yellowgreen 10px solid;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .bienvenida--mod {
     font-family: 'Grandstander', cursive;
@@ -19,6 +22,9 @@
     border-top-left-radius: 10px;
     text-align: center;
     word-spacing: 5px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 .empezamos {
@@ -31,6 +37,9 @@
     border: black 10px solid;
     word-spacing: 5px;
     text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .empezamos:hover {
@@ -48,4 +57,15 @@
     border: black 10px solid;
     word-spacing: 5px;
     text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botonesEinputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    width: 4px;
 }
