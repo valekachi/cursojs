@@ -22,9 +22,7 @@
     border-top-left-radius: 10px;
     text-align: center;
     word-spacing: 5px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+
 }
 
 .empezamos {
@@ -44,7 +42,8 @@
 
 .empezamos:hover {
     background-color: yellowgreen;
-    color:rgb(105, 48, 195)
+    color:rgb(105, 48, 195);
+    align-items: center;
 }
 
 .entradaLetra {
@@ -57,9 +56,12 @@
     border: black 10px solid;
     word-spacing: 5px;
     text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 3rem;
+    padding: 14px;
+    text-align: center;
+    display:inline-flex;
+    justify-self: center;
+
 }
 
 .botonesEinputs {
