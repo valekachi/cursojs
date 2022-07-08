@@ -71,3 +71,15 @@
     padding: 4px;
     width: 4px;
 }
+
+.volver {
+    width: 16px;
+    height: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+:visited {
+    text-decoration: none;
+}
