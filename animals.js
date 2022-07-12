@@ -15,21 +15,24 @@ class Palabras {
 
 console.log(animales);
   const paises = [
-    {pais: 'gyuUaru'},
-    {pais: 'iSagnrup'},
-    {pais: "uevNa aleZdna"},
-    {pais: "livioBa"},
-    {pais: "dánCaa"},
-    {pais: "baCu"}
+    {pais: 'gyuUaru', organizado: 'Uruguay'},
+    {pais: 'iSagnrup', organizado: 'Singapur'},
+    {pais: "uevNa aleZdna", organizado: 'Nueva zelanda'},
+    {pais: "livioBa", organizado: 'Bolivia'},
+    {pais: "dánCaa", organizado: 'Canadá'},
+    {pais: "baCu", organizado: 'Cuba'}
   ];
 
-  
+  let inputPais;
+  let solucionIngresada;
+
     for (const pais of paises) {
+    let ordenados = document.createElement('form');
     let paisito = document.createElement('h1');
     let inputPais = document.createElement('input');
     let subPais = document.createElement('button');
-    paisito.innerText= (pais.pais);
-    inputPais.value = "Ordena la palabra";
+    paisito.innerText = (pais.pais); 
+    document.body.append(ordenados);
     document.body.appendChild(paisito);
     document.body.appendChild(inputPais);
     paisito.className = "bienvenida--mod";
@@ -39,6 +42,16 @@ console.log(animales);
     subPais.style.padding = "4px";
     inputPais.className = "entradaLetra";
     document.body.appendChild(subPais);
+    if (solucionIngresada === paises.organizado)  {
+      let correcto = document.createElement("h1");
+        correcto.innerHTML = "Correcto!";
+        document.body.append(correcto);
+      } else {
+    let incorrecto = document.createElement("h1");
+        incorrecto.innerHTML = "Incorrecto. Sigue intentando!";
+        document.body.append(incorrecto);
+      }
+    
   };
 
 
@@ -47,24 +60,12 @@ const miString = JSON.stringify(avestruz);
 const guardarAvestruz = localStorage.setItem('avestruz', miString);
 
 
-let ordenelo = document.querySelector('#ordene');
-const formAnimal = document.querySelector('#formAnimales');
-const ornito = document.querySelector('#orni');
-const ornitoSub = document.querySelector('#subAnimal');
 
-let solucionIngresada;
+
 
 formAnimal.addEventListener('submit', (e) => {
   e.preventDefault();
-  solucionIngresada = ornito.value;
-  if (solucionIngresada === ornitorrinco.solucion) {
-  let correcto = document.createElement("h1");
-    correcto.innerHTML = "Correcto!";
-    document.body.append(correcto);
-  } else {
-let incorrecto = document.createElement("h1");
-    incorrecto.innerHTML = "Incorrecto. Sigue intentando!";
-    document.body.append(incorrecto);
-  }
+  solucionIngresada = inputPais;
+  
 });
 

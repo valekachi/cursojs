@@ -1,10 +1,11 @@
 
 const form = document.querySelector('form');
 let bienvenido = document.querySelector('#titulo');
-const empezando = document.querySelector('#empezando');
+const empezando = document.querySelector('#starting');
 const entradaNombre = document.querySelector('#inputName');
 
 let nombreIngresado;
+
 
 
 form.addEventListener('submit', (e) => {
@@ -13,14 +14,16 @@ form.addEventListener('submit', (e) => {
   if (nombreIngresado != "") {
   bienvenido.innerHTML = "Hola " + nombreIngresado + ", bienvenido/a!";
   entradaNombre.remove();
+  empezando.innerHTML = "<a href='categorias.html'>¿EMPEZAMOS?</a>"
 } else {
       Swal.fire({
     icon: 'error',
     title: 'Oh oh..',
     text: 'Parece que no has ingresado tu nombre. Ingresalo para jugar!',
-})
-  }
-});
+                  });
+  empezando.innerHTML = "<ahref='categorias.html'>¿EMPEZAMOS?</a>"
+
+}});
 
 entradaNombre.addEventListener('input', (e) => {
   e.preventDefault();

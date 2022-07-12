@@ -45,6 +45,9 @@
     color:rgb(105, 48, 195);
     align-items: center;
 }
+.empezamos a :visited {
+    text-decoration: none;
+}
 
 .entradaLetra {
     color:black;
