@@ -55,13 +55,21 @@ console.log(animales);
         document.body.append(incorrecto);
       }
   });
-
-
+    }
 
 const miString = JSON.stringify(avestruz);
 const guardarAvestruz = localStorage.setItem('avestruz', miString);
 
-
-
-
-    }
+fetch('https://jsonplaceholder.typicode.com/posts', {
+  method: 'POST',
+  body: JSON.stringify({
+    title: 'Aprendiendo a usar fetch',
+    body: 'En mi curso de JavaScript',
+    userId: 1,
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then((json) => console.log(json));
