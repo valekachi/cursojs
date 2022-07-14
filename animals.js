@@ -32,16 +32,20 @@ console.log(animales);
     let inputPais = document.createElement('input');
     let subPais = document.createElement('button');
     paisito.innerText = (pais.pais); 
-    document.body.append(ordenados);
-    document.body.appendChild(paisito);
-    document.body.appendChild(inputPais);
     paisito.className = "bienvenida--mod";
     subPais.className = "bienvenida";
-    subPais.innerText = "¡Ordenar!";
+    subPais.innerHTML = "<p id='formAnimal'>Ordenar!</p>"
     subPais.style.margin = "7px";
     subPais.style.padding = "4px";
     inputPais.className = "entradaLetra";
+    document.body.append(ordenados);
+    document.body.appendChild(paisito);
+    document.body.appendChild(inputPais);
     document.body.appendChild(subPais);
+   let formAnimal = document.getElementById('formAnimal');
+   subPais.addEventListener('submit', (e) => { 
+    e.preventDefault();
+    let solucionIngresada = inputPais.value;
     if (solucionIngresada === paises.organizado)  {
       let correcto = document.createElement("h1");
         correcto.innerHTML = "Correcto!";
@@ -51,8 +55,7 @@ console.log(animales);
         incorrecto.innerHTML = "Incorrecto. Sigue intentando!";
         document.body.append(incorrecto);
       }
-    
-  };
+  });
 
 
 
@@ -62,10 +65,4 @@ const guardarAvestruz = localStorage.setItem('avestruz', miString);
 
 
 
-
-formAnimal.addEventListener('submit', (e) => {
-  e.preventDefault();
-  solucionIngresada = inputPais;
-  
-});
-
+    }
