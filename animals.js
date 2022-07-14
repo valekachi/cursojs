@@ -17,7 +17,7 @@ console.log(animales);
   const paises = [
     {pais: 'gyuUaru', organizado: 'Uruguay'},
     {pais: 'iSagnrup', organizado: 'Singapur'},
-    {pais: "uevNa aleZdna", organizado: 'Nueva zelanda'},
+    {pais: "uevNa aleZdna", organizado: 'Nueva Zelanda'},
     {pais: "livioBa", organizado: 'Bolivia'},
     {pais: "dánCaa", organizado: 'Canadá'},
     {pais: "baCu", organizado: 'Cuba'}
@@ -34,7 +34,7 @@ console.log(animales);
     paisito.innerText = (pais.pais); 
     paisito.className = "bienvenida--mod";
     subPais.className = "bienvenida";
-    subPais.innerHTML = "<p id='formAnimal'>Ordenar!</p>"
+    subPais.innerText = "Ordenar!"
     subPais.style.margin = "7px";
     subPais.style.padding = "4px";
     inputPais.className = "entradaLetra";
@@ -42,11 +42,10 @@ console.log(animales);
     document.body.appendChild(paisito);
     document.body.appendChild(inputPais);
     document.body.appendChild(subPais);
-   let formAnimal = document.getElementById('formAnimal');
-   subPais.addEventListener('submit', (e) => { 
+   subPais.addEventListener('click', (e) => { 
     e.preventDefault();
     let solucionIngresada = inputPais.value;
-    if (solucionIngresada === paises.organizado)  {
+    if (solucionIngresada === pais.organizado)  {
       let correcto = document.createElement("h1");
         correcto.innerHTML = "Correcto!";
         document.body.append(correcto);
