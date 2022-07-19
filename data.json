@@ -1,0 +1,7 @@
+[
+    {"regla": "Ingresar tu nombre", "nr": 1},
+    {"regla": "Elegir una categoría", "nr": 2},
+    {"regla": "Ordenar las letras que aparecen en pantalla para formar la palabra", "nr": 3},
+    {"regla": "Si es correcto, continuar con la siguiente", "nr": 4},
+    {"regla": "Si es incorrecto, volver a intentarlo o pedir una pista", "nr": 5}
+]

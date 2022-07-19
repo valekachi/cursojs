@@ -31,6 +31,7 @@ console.log(animales);
     let paisito = document.createElement('h1');
     let inputPais = document.createElement('input');
     let subPais = document.createElement('button');
+    document.querySelector('main').style.justifyContent = "center";
     paisito.innerText = (pais.pais); 
     paisito.className = "bienvenida--mod";
     subPais.className = "bienvenida";
@@ -46,13 +47,21 @@ console.log(animales);
     e.preventDefault();
     let solucionIngresada = inputPais.value;
     if (solucionIngresada === pais.organizado)  {
-      let correcto = document.createElement("h1");
-        correcto.innerHTML = "Correcto!";
-        document.body.append(correcto);
+      Swal.fire({
+        title: 'Felicitaciones! Es correcto',
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp'
+        }
+      })
       } else {
-    let incorrecto = document.createElement("h1");
-        incorrecto.innerHTML = "Incorrecto. Sigue intentando!";
-        document.body.append(incorrecto);
+        Swal.fire({
+          icon: 'error',
+          title: '¡Incorrecto!',
+          text: 'Vuelve a intentarlo!',
+                        });
       }
   });
     }
@@ -60,16 +69,20 @@ console.log(animales);
 const miString = JSON.stringify(avestruz);
 const guardarAvestruz = localStorage.setItem('avestruz', miString);
 
-fetch('https://jsonplaceholder.typicode.com/posts', {
-  method: 'POST',
-  body: JSON.stringify({
-    title: 'Aprendiendo a usar fetch',
-    body: 'En mi curso de JavaScript',
-    userId: 1,
-  }),
-  headers: {
-    'Content-type': 'application/json; charset=UTF-8',
-  },
-})
+const lista = document.querySelector('#listita');
+
+fetch('data.json') 
+
   .then((response) => response.json())
-  .then((json) => console.log(json));
+  .then((data) => {
+                
+                const a = document.createElement('a');
+                a.innerHTML = 
+                '<a href="data.json">REGLAS DEL JUEGO</a>';
+                a.className = 'entradaLetra';
+
+                
+
+                lista.append(a)
+    
+  });

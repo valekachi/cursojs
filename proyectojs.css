@@ -1,14 +1,17 @@
 .fondo {
-    background: linear-gradient(rgb(37, 37, 37), rgb(105, 48, 195), rgb(100, 223, 223), rgb(128, 255, 219), rgb(37, 37, 37));
+    background:  -o-linear-gradient(45deg, rgba(179, 86, 255, 0.6) 0%, rgba(2, 242, 114, .7) 100%);
+	background: -ms-linear-gradient(45deg, rgba(140, 0, 255, .6) 0%, rgba(2, 242, 114, .7) 100%);
+	background:  linear-gradient(45deg, rgba(140, 0, 255, .6) 0%, rgba(2, 242, 114, .7) 100%);
     margin: 4px;
 }
+
 .bienvenida {
     font-family: 'Grandstander', cursive;
     font-weight: bolder;
     color: black;
     border-bottom-right-radius: 10px;
     border-top-left-radius: 10px;
-    border: yellowgreen 10px solid;
+    border: rgb(170, 200, 111) 10px solid;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -27,7 +30,7 @@
 
 .empezamos {
     color:black;
-    background-color: rgb(105, 48, 195);
+    background-color: rgb(170, 200, 111);
     font-family: 'Grandstander', cursive;
     border-bottom-right-radius: 10px;
     border-top-left-radius: 10px;
@@ -41,8 +44,8 @@
 }
 
 .empezamos:hover {
-    background-color: yellowgreen;
-    color:rgb(105, 48, 195);
+    background-color: rgb(170, 200, 111);
+    color:rgb(170, 200, 111);
     align-items: center;
 }
 .empezamos a :visited {
@@ -62,8 +65,7 @@
     margin: 3rem;
     padding: 14px;
     text-align: center;
-    display:inline-flex;
-    justify-self: center;
+    position: center;
 
 }
 
@@ -76,8 +78,7 @@
 }
 
 .volver {
-    width: 16px;
-    height: 4px;
+
     display: flex;
     justify-content: center;
     align-items: center;
