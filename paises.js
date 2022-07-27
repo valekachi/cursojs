@@ -66,7 +66,7 @@ fetch('data.json')
                 const a = document.createElement('a');
                 a.innerHTML = '<a href="data.json">REGLAS DEL JUEGO</a>';
                 a.className = 'entradaLetra';
-                
+                           
           
 
                 

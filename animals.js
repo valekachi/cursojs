@@ -1,55 +1,34 @@
-const animales = [];
-class Palabras {
-    constructor(desordenado, solucion, pista) {
-      this.desordenado = desordenado;
-      this.solucion = solucion;
-      this.pista = pista;
-  }
-  }
-  const avestruz = new Palabras ("zArtseuv","Avestruz", "Alas y cuello largo");
-  animales.push(avestruz);
-  const ornitorrinco = new Palabras("rOintrorinco", "Ornitorrinco", "Mamífero de cuello muy muy largo!");
-  animales.push(ornitorrinco);
-  const murcielago = new Palabras("lagoMéurci","Murciélago", "Soy un animal que le gusta dormir con mi cabeza para abajo...");
-  animales.push(murcielago);
+const animales = [
+  {animal: "zArtseuv", organizado: "Avestruz", pista: "Alas y cuello largo"},
+  {animal: "rOintrorinco", organizado: "Ornitorrinco", pista: "Mamífero de cuello muy largo"},
+  {animal: "lagoMéurci", organizado: "Murciélago", pista: "Me gusta dormir con la cabeza para abajo..."},
+  {animal: "oOs", organizado: "Oso", pista: "Si hay algo que me gusta, es la miel!"},
+  {animal: "rPreo", organizado: "Perro", pista: "Los humanos dicen que soy su mejor amigo!"},
+  {animal: "toGa", organizado: "Gato", pista: "Dicen que somos enemigos de los perros, será así?"}
+];
 
-console.log(animales);
-  const paises = [
-    {pais: 'gyuUaru', organizado: 'Uruguay'},
-    {pais: 'iSagnrup', organizado: 'Singapur'},
-    {pais: "uevNa aleZdna", organizado: 'Nueva Zelanda'},
-    {pais: "livioBa", organizado: 'Bolivia'},
-    {pais: "dánCaa", organizado: 'Canadá'},
-    {pais: "baCu", organizado: 'Cuba'},
-    {pais: "Epúr", organizado: 'Perú'},
-    {pais: "lisBar", organizado: 'Brasil'}
-  ];
+let animalIngresado;
 
-  let inputPais;
-  let solucionIngresada;
-
-    for (const pais of paises) {
-    let ordenados = document.createElement('form');
-    let paisito = document.createElement('h1');
-    let inputPais = document.createElement('input');
-    let subPais = document.createElement('button');
-    document.querySelector('main').style.justifyContent = "center";
-    paisito.innerText = (pais.pais); 
-    paisito.style.letterSpacing = "20px";
-    paisito.className = "bienvenida--mod";
-    subPais.className = "bienvenida";
-    subPais.innerText = "Ordenar!"
-    subPais.style.margin = "7px";
-    subPais.style.padding = "4px";
-    inputPais.className = "entradaLetra";
-    document.body.append(ordenados);
-    document.body.appendChild(paisito);
-    document.body.appendChild(inputPais);
-    document.body.appendChild(subPais);
-   subPais.addEventListener('click', (e) => { 
+for (const animal of animales) {
+  let ordenarAnimal = document.createElement('h1');
+  ordenarAnimal.innerText = (animal.animal);
+  document.body.appendChild(ordenarAnimal);
+  let inputAnimal = document.createElement('input');
+  document.body.appendChild(inputAnimal)
+  let subAnimal = document.createElement('button');
+  subAnimal.innerText = "¡Ordenar!";
+  document.body.appendChild(subAnimal);
+  ordenarAnimal.style.letterSpacing = "20px";
+  ordenarAnimal.className = "bienvenida--mod";
+  subAnimal.className = "bienvenida";
+  subAnimal.innerText = "Ordenar!"
+  subAnimal.style.margin = "7px";
+  subAnimal.style.padding = "4px";
+  inputAnimal.className = "entradaLetra";
+  subAnimal.addEventListener('click', (e) => { 
     e.preventDefault();
-    let solucionIngresada = inputPais.value;
-    if (solucionIngresada === pais.organizado)  {
+    let animalIngresado = inputAnimal.value;
+    if (animalIngresado === animal.organizado)  {
       Swal.fire({
         title: 'Felicitaciones! Es correcto',
         showClass: {
@@ -69,8 +48,6 @@ console.log(animales);
   });
     }
 
-const miString = JSON.stringify(avestruz);
-const guardarAvestruz = localStorage.setItem('avestruz', miString);
 
 const lista = document.querySelector('#listita');
 
