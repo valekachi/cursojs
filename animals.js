@@ -16,8 +16,12 @@ for (const animal of animales) {
   let inputAnimal = document.createElement('input');
   document.body.appendChild(inputAnimal)
   let subAnimal = document.createElement('button');
+  let pista = document.createElement('button');
+  pista.innerText = "Pista";
+  pista.className = "bienvenida";
   subAnimal.innerText = "¡Ordenar!";
   document.body.appendChild(subAnimal);
+  document.body.appendChild(pista);
   ordenarAnimal.style.letterSpacing = "20px";
   ordenarAnimal.className = "bienvenida--mod";
   subAnimal.className = "bienvenida";
@@ -46,8 +50,16 @@ for (const animal of animales) {
                         });
       }
   });
-    }
+   pista.addEventListener('click', (e) => {
+    Swal.fire(animal.pista);
 
+   })
+};
+
+
+
+const miString = JSON.stringify(animales[0].animal);
+const guardarAvestruz = localStorage.setItem(animales[0].animal, miString);
 
 const lista = document.querySelector('#listita');
 

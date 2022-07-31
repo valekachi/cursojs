@@ -1,28 +1,32 @@
 
   const paises = [
-    {pais: 'gyuUaru', organizado: 'Uruguay'},
-    {pais: 'iSagnrup', organizado: 'Singapur'},
-    {pais: "uevNa aleZdna", organizado: 'Nueva Zelanda'},
-    {pais: "livioBa", organizado: 'Bolivia'},
-    {pais: "dánCaa", organizado: 'Canadá'},
-    {pais: "baCu", organizado: 'Cuba'},
-    {pais: "Epúr", organizado: 'Perú'},
-    {pais: "lisBar", organizado: 'Brasil'}
+    {pais: 'gyuUaru', organizado: 'Uruguay', pista: "Pequeño país rioplatense"},
+    {pais: 'iSagnrup', organizado: 'Singapur', pista: "Se encuentra entre Malasia e Indonesia"},
+    {pais: "uevNa aleZdna", organizado: 'Nueva Zelanda', pista: "A sus ciudadanos se les dice kiwis..."},
+    {pais: "livioBa", organizado: 'Bolivia', pista: "País andino sin salida al mar"},
+    {pais: "dánCaa", organizado: 'Canadá', pista: "Su bandera es roja y blanca y tiene una hoja!"},
+    {pais: "baCu", organizado: 'Cuba', pista: "Su capital es La Habana"},
+    {pais: "Epúr", organizado: 'Perú', pista: "País andino que tiene salida la mar..."},
+    {pais: "lisBar", organizado: 'Brasil', pista: "Es el país más grande de América del Sur!"}
   ];
 
   let inputPais;
   let solucionIngresada;
 
     for (const pais of paises) {
+    let ordenados = document.createElement('form');
     let paisito = document.createElement('h1');
     let inputPais = document.createElement('input');
     let subPais = document.createElement('button');
+    let darPista = document.createElement('button');
     document.querySelector('main').style.justifyContent = "center";
     paisito.innerText = (pais.pais); 
     paisito.style.letterSpacing = "20px";
     paisito.className = "bienvenida--mod";
     subPais.className = "bienvenida";
     subPais.innerText = "Ordenar!"
+    darPista.className = "bienvenida";
+    darPista.innerText = "Pista";
     subPais.style.margin = "7px";
     subPais.style.padding = "4px";
     inputPais.className = "entradaLetra";
@@ -30,6 +34,7 @@
     document.body.appendChild(paisito);
     document.body.appendChild(inputPais);
     document.body.appendChild(subPais);
+    document.body.appendChild(darPista);
    subPais.addEventListener('click', (e) => { 
     e.preventDefault();
     let solucionIngresada = inputPais.value;
@@ -51,10 +56,10 @@
                         });
       }
   });
-    }
+  darPista.addEventListener('click', (e) => {
+    Swal.fire(pais.pista);
+  })};
 
-const miString = JSON.stringify(avestruz);
-const guardarAvestruz = localStorage.setItem('avestruz', miString);
 
 const lista = document.querySelector('#listita');
 
@@ -70,7 +75,7 @@ fetch('data.json')
           
 
                 
-
+                
                 lista.append(a);
 
   });
