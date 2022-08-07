@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "sweetalert2": "^11.4.24"
+  },
+  "name": "cursojs",
+  "version": "1.0.0",
+  "main": "afinado.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valekachi/cursojs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valekachi/cursojs/issues"
+  },
+  "homepage": "https://github.com/valekachi/cursojs#readme",
+  "description": ""
+}

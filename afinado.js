@@ -28,5 +28,34 @@ form.addEventListener('submit', (e) => {
 entradaNombre.addEventListener('input', (e) => {
   e.preventDefault();
   sessionStorage.setItem('nombreUsuario', entradaNombre.value);
+  
 });
+let userName = sessionStorage.getItem('nombreUsuario');
+if (userName) {
+bienvenido.innerHTML = "Hola " + userName + ", bienvenido/a!"
+bienvenido.className = 'bienvenida--mod';
+entradaNombre.value = userName;
+entradaNombre.style.display = 'none';
+empezando.innerHTML = "<a href='categorias.html'>¿EMPEZAMOS?</a>"
+}
+
+
+const lista = document.querySelector('#listita');
+
+fetch('data.json')
+
+.then((response) => response.json())
+.then((data) => {
+        listaReglas = document.createElement('ul') 
+
+        for (i = 0; i < data.length; ++i) {
+        itemLista = document.createElement('li');
+
+        itemLista.innerHTML = data[i].regla;
+
+        listaReglas.appendChild(itemLista);
+        lista.appendChild(listaReglas);
+    }})
+	
+    
 

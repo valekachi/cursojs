@@ -60,22 +60,3 @@ for (const animal of animales) {
 
 const miString = JSON.stringify(animales[0].animal);
 const guardarAvestruz = localStorage.setItem(animales[0].animal, miString);
-
-const lista = document.querySelector('#listita');
-
-fetch('data.json') 
-
-  .then((response) => response.json())
-  .then((data) => {
-                
-                const a = document.createElement('a');
-                a.innerHTML = '<a href="data.json">REGLAS DEL JUEGO</a>';
-                a.className = 'entradaLetra';
-                
-          
-
-                
-
-                lista.append(a)
-    
-  });
