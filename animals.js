@@ -1,3 +1,4 @@
+
 const animales = [
   {animal: "zArtseuv", organizado: "Avestruz", pista: "Alas y cuello largo"},
   {animal: "rOintrorinco", organizado: "Ornitorrinco", pista: "Mamífero de cuello muy largo"},
@@ -8,6 +9,7 @@ const animales = [
 ];
 
 let animalIngresado;
+
 
 for (const animal of animales) {
   let ordenarAnimal = document.createElement('h1');
@@ -55,7 +57,21 @@ for (const animal of animales) {
 
    })
 };
+ 
+ let final = document.createElement('button');
+ final.className = "fondo";
+ final.innerHTML = "<h1>FINALIZAR!</h1>"
+ document.body.appendChild(final);
+ final.addEventListener('click', (e) => {
+   Swal.fire({
+     icon: 'success',
+     title: 'Has llegado al fin, ¡esperamos que hayas podido acertar todas las palabras! ¿Te animarías a seguir con la siguiente categoría?',
+     html: '<a href="paises.html">PAISES</a>',
+     confirmButtonText: 'No, gracias'
 
+ })
+ }
+ )
 
 
 const miString = JSON.stringify(animales[0].animal);

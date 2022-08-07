@@ -59,3 +59,18 @@
   darPista.addEventListener('click', (e) => {
     Swal.fire(pais.pista);
   })};
+
+  let final = document.createElement('button');
+ final.className = "fondo";
+ final.innerHTML = "<h1>FINALIZAR!</h1>"
+ document.body.appendChild(final);
+ final.addEventListener('click', (e) => {
+   Swal.fire({
+     icon: 'success',
+     title: 'Has llegado al fin, ¡esperamos que hayas podido acertar todas las palabras! ¿Te animarías a seguir con la siguiente categoría?',
+     html: '<a href="animales.html">ANIMALES</a>',
+     confirmButtonText: 'No, gracias'
+
+ })
+ }
+ )
